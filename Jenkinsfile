@@ -11,6 +11,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'npm cache clean -f'
                 sh 'npm remove node_modules'
                 sh 'npm remove package-lock.json'
                 sh 'npm install'
