@@ -12,6 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'npm cache clean -f'
+                sh 'npm config set registry https://registry.npm.taobao.org'
                 sh 'npm remove node_modules'
                 sh 'npm remove package-lock.json'
                 sh 'npm install'
