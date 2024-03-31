@@ -12,7 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'npm cache clean -f'
-                sh 'npm config set registry https://npm.aliyun.com'
+                sh 'npm config set registry https://registry.npmmirror.com'
                 sh 'npm install'
             }
         }
